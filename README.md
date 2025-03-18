@@ -17,9 +17,12 @@
 C:\Users\<username>\AppData\Local\Google\Chrome\User Data\
 В этой директории нужно найти папку нового профиля браузера, которая будет использоваться в тестах.
 
-Нужно задать две переменные 
+В файле chrome.properties нужно изменить значение следующих переменных на свои: 
 --user-data-dir=C:\\Users\\<username>\\AppData\\Local\\Google\\Chrome\\User Data\\
 --profile-directory=Profile 1
+
+Запустить выполнение теста можно командой
+mvn test
 
 Для генерации allure отчета нужно выполнить из командной строки, находясь в корневой папке проекта:
 allure generate allure-results --clean -o allure-report
